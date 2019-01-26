@@ -22,7 +22,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'));
 })
 
-app.post('/user', function(req, res) {
+app.get('/user', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/user.html'));
+})
+
+app.post('/send_name', function(req, res) {
   const { name } = req.body;
   fireData.ref('user').push().set(name).then(() => {
     res.json({
