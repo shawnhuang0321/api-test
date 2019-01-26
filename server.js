@@ -19,9 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
 app.get('/', (req, res) => {
-  fireData.ref('any').once('value', snapshot => {
-    res.send(snapshot.val());
-  })
+  res.sendFile(path.join(__dirname, '/views/index.html'));
 })
 
 app.post('/user', function(req, res) {
