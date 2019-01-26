@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require( 'body-parser' );
 const fireData = require('./connections/firebase_admin');
+
 // const admin = require("firebase-admin")
 // var serviceAccount = require("./fire-api-test-97214-firebase-adminsdk-yzocl-a0e634c920");
 
